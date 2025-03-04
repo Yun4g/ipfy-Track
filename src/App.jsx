@@ -3,6 +3,7 @@ import './index.css';
 import IpSearch from './components/IpSearch'
 import MapComponent from './components/map';
 import IpStore from './stores/ipStore';
+
 function App() {
   const latitude = IpStore((state) => state.latitude);
   const longitude = IpStore((state) => state.longitude);
