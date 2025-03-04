@@ -2,7 +2,7 @@ import { useState } from "react";
 import UseFetch from "./useFetch";
 import { useEffect } from "react";
 import IpStore from "../stores/ipStore";
-import MapComponent from "./map";
+
 
 
 function IpSearch() {
@@ -31,9 +31,6 @@ function IpSearch() {
     console.log(data)
 
    
-
-
-
 
     const handleChanges = (e) => {
         const input = e.target.value;
