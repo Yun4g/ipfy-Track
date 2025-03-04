@@ -58,8 +58,8 @@ function IpSearch() {
                     id="ip-address-input"
                     name="ip-address-input"
                     required
-                    className=" ps-5 outline-none w-[90%]" placeholder="Enter Ip address" />
-                <button onClick={handleSearch} className=" bg-black flex justify-center items-center h-full w-[10%]">
+                    className=" ps-5 outline-none w-[87%] md:w-[90%]" placeholder="Enter Ip address" />
+                <button onClick={handleSearch} className=" bg-black flex justify-center items-center h-full w-[27%] md:w-[10%]">
                     <img src="images/icon-arrow.svg" alt="" />
                 </button>
             </div>
