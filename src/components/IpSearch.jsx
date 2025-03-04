@@ -19,7 +19,7 @@ function IpSearch() {
 
     useEffect(() => {
         if (data && !loading && !error) {
-            setLocation(data.ip, data.latitude, data.longitude);
+            setLocation(data?.ip, data?.latitude, data?.longitude);
         }
     }, [data, loading, error, setLocation]);
 
