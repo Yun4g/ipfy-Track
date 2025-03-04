@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.bgIpaddress{
+    background-image:  url('/images/pattern-bg-desktop.png');
+   
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+}
