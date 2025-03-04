@@ -64,7 +64,7 @@ function IpSearch() {
                 </button>
             </div>
 
-            {/* <div className=" md:flex gap-7 md:gap-3 h-fit md:h-36  p-4 md:p-8 bg-white shadow-md shadow-slate-500 md:absolute z-50  text-center  top-40 md:top-56 rounded-lg w-4/5 border">
+            <div className=" md:flex gap-7 md:gap-3 h-fit md:h-36  p-4 md:p-8 bg-white shadow-md shadow-slate-500 md:absolute z-50  text-center  top-40 md:top-56 rounded-lg w-4/5 border">
                 <div className=" md:w-2/6 h-full border-e-2">
                     <p className=" text-slate-500 font-bold">IP ADDRESS</p>
                     {
@@ -98,7 +98,7 @@ function IpSearch() {
                         }
                     </h2>
                 </div>
-            </div> */}
+            </div>
 
         </div>
     );
