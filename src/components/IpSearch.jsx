@@ -30,6 +30,8 @@ function IpSearch() {
     }
     console.log(data)
 
+    console.log('hii')
+
 
 
     const handleChanges = (e) => {
