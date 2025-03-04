@@ -75,7 +75,7 @@ function IpSearch() {
                     <p className=" text-slate-500 font-bold">LOCATION</p>
 
                     {
-                        loading ? <h2>Loading...</h2> : error ? <h2>INvalid ip address or "This is a reserved/private IP"</h2> : <h2 className=" md:text-lg lg:text-2xl font-bold"> {data.country_name}, {data.city} {data.reason}</h2>
+                        loading ?( <h2>Loading...</h2>) : error ? (<h2>INvalid ip address or "This is a reserved/private IP"</h2>) : data && data.country_name ? (<h2 className=" md:text-lg lg:text-2xl font-bold"> {data.country_name}, {data.city}  {data.reason}</h2>) : (<h2>No data available</h2>)
                     }
 
                 </div>
@@ -83,7 +83,7 @@ function IpSearch() {
                     <p className=" text-slate-500 font-bold">TIMEZONE</p>
                     <h2>
                         {
-                            loading ? <h2>Loading...</h2> : error ? <h2>Error...</h2> : <h2 className=" md:text-lg  lg:text-2xl font-bold">{data.timezone} {data.reason}</h2>
+                            loading ? (<h2>Loading...</h2>) : error ?( <h2>Error...</h2>) : data && data.timezone ?(<h2 className=" md:text-lg  lg:text-2xl font-bold">{data.timezone} {data.reason}</h2>) : (<h2>No data available</h2>)
                         }
                     </h2>
                 </div>
@@ -94,7 +94,7 @@ function IpSearch() {
                     <h2>
 
                         {
-                            loading ? <h2>Loading...</h2> : error ? <h2>Error...</h2> : <h2 className=" text-lg lg:text-2xl font-bold">{data.org} {data.reason}</h2>
+                            loading ? (<h2>Loading...</h2>) : error ? (<h2>Error...</h2>)  : data && data.org ? (<h2 className=" text-lg lg:text-2xl font-bold">{data.org} {data.reason}</h2>) : (<h2>No data available</h2>)
                         }
                     </h2>
                 </div>
