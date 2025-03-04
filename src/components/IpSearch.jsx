@@ -68,7 +68,7 @@ function IpSearch() {
                 <div className=" md:w-2/6 h-full border-e-2">
                     <p className=" text-slate-500 font-bold">IP ADDRESS</p>
                     {
-                        loading ? (<h2>Loading...</h2> ) : error ? ( <h2>Error...</h2> ) : data && data.ip ? ( <h2 className="md:text-lg lg:text-2xl">{data.ip}</h2> ) : (<h2>No data available</h2>  )
+                        loading ? (<h2>Loading...</h2> ) : error ? ( <h2>Error...</h2> ) : data && data.ip ? ( <h2 className="md:text-lg font-bold lg:text-2xl">{data.ip}</h2> ) : (<h2>No data available</h2>  )
                    }
                 </div>
                 <div className=" md:w-2/6 h-full border-e-2">
@@ -83,7 +83,7 @@ function IpSearch() {
                     <p className=" text-slate-500 font-bold">TIMEZONE</p>
                     <h2>
                         {
-                            loading ? <h2>Loading...</h2> : error ? <h2>Error...</h2> : <h2 className=" md:text-lg lg:text-2xl font-bold">{data.timezone} {data.reason}</h2>
+                            loading ? <h2>Loading...</h2> : error ? <h2>Error...</h2> : <h2 className=" md:text-lg  lg:text-2xl font-bold">{data.timezone} {data.reason}</h2>
                         }
                     </h2>
                 </div>
