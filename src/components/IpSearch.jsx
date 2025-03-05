@@ -2,6 +2,7 @@ import { useState } from "react";
 import UseFetch from "./useFetch";
 import { useEffect } from "react";
 import IpStore from "../stores/ipStore";
+import axios from "axios";
 
 
 
@@ -13,24 +14,40 @@ function IpSearch() {
     const [fetch, setFetch] = useState(storedUrl || null);
     const setLocation = IpStore((state) => state.setLocation);
     const { data, loading, error } = UseFetch(fetch);
+   
 
 
-
+      useEffect(() => {4
+        const fetchData = async() => {
+            try {
+                const response = axios.get('https://api.ipify.org?format=json');
+               const userIp = response.data.ip;
+               setIpAddress(userIp);
+               localStorage.setItem('ipAddress', userIp);
+               localStorage.setItem('fetch', `https://ipapi.co/${userIp}/json/`);
+            } catch (error) {
+               console.log(error.message);
+            }  
+        }
+  
+        fetchData();
+      },[]);
 
     useEffect(() => {
         if (data && !loading && !error) {
             setLocation(data?.ip, data?.latitude, data?.longitude);
         }
-    }, [data, loading, error, setLocation]);
+     }, [data, loading, error, setLocation]);
+
+    console.log(data)
 
     const handleSearch = () => {
         const url = `https://ipapi.co/${ipAddress}/json/`;
-        setFetch(url);
+        setFetch(url);    
         localStorage.setItem("fetch", url);
     }
-    console.log(data)
 
-   
+ 
 
     const handleChanges = (e) => {
         const input = e.target.value;
